@@ -1,0 +1,21 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Header from './component/header';
+import Main from './component/main';
+import Footer from './component/footer';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="wapper">
+        <Header></Header>
+        <Main></Main>
+        <Footer></Footer>
+      </div>
+    );
+  }
+
+}
+
+export default App;
