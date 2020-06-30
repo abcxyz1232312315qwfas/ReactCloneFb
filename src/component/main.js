@@ -5,38 +5,97 @@ import React from 'react';
 function Main() {
     return (
         <>
-            <div class="content">
+            <form onSubmit={this.handleSubmit} noValidate>
+          <div class="content">
                 <div id="intro1" class="content"><strong>Facebook giúp bạn kết nối và chia sẻ với mọi</strong><br/>
                 <strong>người trong cuộc sống của bạn.</strong></div>
                 <div id="intro2" class="content"><strong>Đăng ký</strong></div>
                 <div id="img2" class= "content" ><img src="world.png"/></div>
                 <div id="intro3" class="content">Nhanh chóng và dễ dàng.</div>
                 <div id="form3" class="content">
-                    <input placeholder="Họ" type="text" id="namebox" name="firstname" />  <input placeholder="Tên" type="text" id="namebox" name="lastname" />
-                    <input placeholder="Số điện thoại hoặc email" type="text" id="mailbox" name="email" />
-                    <input placeholder="Mật khẩu mới" id="mailbox" type="password" cname="password" />
+                <div className="username">
+                  <div className="container">
+                        <input  className={formErrors.firstName.length > 0 ? "error" : null}
+                                placeholder="Họ" 
+                                type="text" 
+                                id="namebox" 
+                                name="firstName" 
+                                onChange={this.handleChange} 
+                                noValidate 
+                        />
+                        <div id='message1'>
+                          {formErrors.firstName.length > 0 && (
+                            <span className="errorMessage">{formErrors.firstName}</span>
+                          )}
+                        </div>
+                    </div>
+                  </div>
+                  <div className="email">
+                    <div className="container">
+                          <div>
+                            <input  className={formErrors.lastName.length > 0 ? "error" : null}
+                                    placeholder="Tên" 
+                                    type="text" id="namebox" 
+                                    name="lastName" 
+                                    onChange={this.handleChange} 
+                                   noValidate
+                             />
+                          </div>
+                        <div id='message1'>
+                           {formErrors.lastName.length > 0 && (
+                            <span className="errorMessage">{formErrors.lastName}</span>
+                          )}
+                        </div>
+                    </div>
+                  </div>
+                  <div className="email">
+                    <div className="container">
+                          <div>
+                              <input  className={formErrors.email.length > 0 ? "error" : null}
+                                      placeholder="Số điện thoại hoặc email" 
+                                      type="text" 
+                                      id="mailbox" 
+                                      name="email" 
+                                      onChange={this.handleChange} 
+                                      noValidate
+                              />
+                            </div>
+                            <div id='message1'>
+                                {formErrors.email.length > 0 && (
+                                  <span className="errorMessage">{formErrors.email}</span>
+                                )}
+                              </div>
+                      </div>
+                    </div>
+                    <div className="password">
+                      <div className="container">
+                          <div>
+                            <input  className={formErrors.password.length > 0 ? "error" : null}
+                                    placeholder="Mật khẩu mới" 
+                                    id="mailbox2" 
+                                    type="password" 
+                                    name="password" 
+                                    onChange={this.handleChange} 
+                                    noValidate
+                            />
+                          </div>
+                          <div id='message1'>
+                              {formErrors.password.length > 0 && (
+                                <div className="errorMessage">{formErrors.password}</div>
+                              )}
+                          </div>
+                      </div>
+                    </div>
                     <br/><br/>
                     Ngày sinh<br/>
-                        <select name="day" id="selectday mySelect">
-                        
+                        <select name="day" id="selectday">
+                            {_.range(1, 30 + 1).map(value => <option key={value} value={value}>{value}</option>)}
                         </select>
                         <select name="month" id="selectmonth">
-                            <option value="#">Tháng 1</option>
-                            <option value="#">Tháng 2</option>
-                            <option value="#">Tháng 3</option>
-                            <option value="#">Tháng 4</option>
-                            <option value="#">Tháng 5</option>
-                            <option value="#">Tháng 6</option>
-                            <option value="#">...</option>
+                            {_.range(1, 12 + 1).map(value => <option key={value} value={value}>{'Thang '+value}</option>)}
                         </select>
                         <select name="year" id="selectday">
-                            <option value="#">1995</option>
-                            <option value="#">1996</option>
-                            <option value="#">1997</option>
-                            <option value="#">1998</option>
-                            <option value="#">1999</option>
-                            <option value="#">2000</option>
-                            <option value="#">...</option>
+                            {_.range(1970, 2020 + 1).map(value => <option key={value} value={value}>{value}</option>)}
                         </select>
                     <br/>
                     <br/>
@@ -52,7 +111,9 @@ function Main() {
                     </div>
                 </div>
                 <input type="submit" id="button2" value="Đăng Ký" ></input>
-            </div>	
+            </div>
+          </form>
+
         </>
     );
 }
