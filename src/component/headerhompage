@@ -1,0 +1,37 @@
+import React from 'react';
+
+function Header() {
+  return (
+    <>
+   
+	<div className="header">
+		<div id="img3" className="header">
+			<img src="logohomepage.png"/>
+		</div>
+		<div id="searcharea" className="header"/>
+			<input placeholder="         Tìm kiếm trên Facebook" type="text" id="searchbox" />
+		</div>
+		<div id="profilearea" className="header">
+				<a href="watch.html"><img src="home.png"/></a>
+		</div>
+
+		<div id="profilearea1" className="header">
+			<a href="market.html"><img src="watch.png"/></a>
+		</div>
+
+		<div id="profilearea2" className="header">
+			<a href="group.html"><img src="market.png"/></a>
+		</div>
+
+		<div id="profilearea3" className="header">
+			<a href="facebook.html"><img src="group.png"/></a>
+		</div>
+
+		<div id="profilearea4" className="header">
+			<a href="facebook.html"><img src="game.png"/></a>
+		</div>
+    </>
+  );
+}
+
+export default Header;
