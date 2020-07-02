@@ -1,0 +1,98 @@
+import React from 'react';
+import _ from 'lodash';
+
+class Main extends React.Component {
+  render() {
+    return (
+      <>
+        {/* <!-- nav --> */}
+			<div class="navigate">
+				<div class="container">
+						<div id="profilearea5" class="btn">
+								<a href="#"><img src="avata.png" /><span>Đức</span></a>
+						</div>
+				</div>
+				<div class="container">
+						<div id="profilearea5" class="btn">		
+								<a href="#"><img src="itemfriend.png" /> Bạn bè</a>
+						</div>
+				</div>
+				<div class="container">
+						<div id="profilearea5" class="btn">		
+								<a href="#"><img src="itemmess.png" /> Messager</a>
+						</div> 
+				</div>
+				<div class="container">
+						<div id="profilearea5" class="btn">		
+								<a href="#"><img src="itemcalendar.png" /> Sự kiện</a>
+						</div>
+				</div>
+				<div class="container">
+						<div id="profilearea5" class="btn">		
+								<a href="#"><img src="itemmarket.png" /> Marketplace</a>
+						</div>
+				</div>
+				<hr/>
+				<div class="container">
+						<div id="profilearea5" >		
+								<a> Lối tắt</a>
+						</div>
+				</div>
+			</div>
+
+		{/* <!-- nav --> */}
+		{/* <!-- main content --> */}
+			<div class="content">
+				<br />
+				<br />
+				<div class="status">
+					<div class="wrapper">
+						<div id="img3" >
+							<img src="avata.png" />
+							
+						</div>
+						<div>
+							<input placeholder="Tìm kiếm trên Facebook" type="text" id="searchbox" />
+						</div>
+					</div>
+					<hr />
+					<div class="wrapper">
+						<div id="profilearea5" class="btnstatus">		
+								<a href="#"><img src="stream.png" /><span>Video trực tiếp</span></a>
+						</div>
+						<div id="profilearea5" class="btnstatus">		
+								<a href="#"><img src="image.png" /><span>Ảnh/Video</span></a>
+						</div>
+						<div id="profilearea5" class="btnstatus1">		
+								<a href="#"><img src="icon.png" /><span>Cảm xúc/Hoạt động</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		{/* <!-- main content --> */}
+		{/* <!-- sidebar --> */}
+			<div class="sidebar">
+				<div class="containersidebar">
+						<div id="profilearea6" >		
+							<a href="#">Sinh nhật</a>
+						</div>
+						<div>
+							<a href="#"><img src="happy.png"/> 
+								Hôm nay là sinh nhật của ABC</a>
+						</div>
+				</div>
+				<hr/>
+				<div class="containersidebar">
+						<div id="profilearea6" >		
+							<a href="#">Người liên hệ</a>
+						</div>
+				</div>
+			</div>
+		{/* <!-- sidebar --> */}
+	{/* <!-- body --> */}
+
+      </>
+    );
+  }
+}
+export default Main;
